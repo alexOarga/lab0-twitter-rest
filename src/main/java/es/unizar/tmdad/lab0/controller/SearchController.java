@@ -1,7 +1,6 @@
 package es.unizar.tmdad.lab0.controller;
 
 import es.unizar.tmdad.lab0.service.TwitterLookupService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.social.UncategorizedApiException;
 import org.springframework.stereotype.Controller;
@@ -15,8 +14,12 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @Controller
 public class SearchController {
 
-    @Autowired
+    final
     TwitterLookupService twitter;
+
+    public SearchController(TwitterLookupService twitter) {
+        this.twitter = twitter;
+    }
 
     @RequestMapping("/")
     public String greeting() {
@@ -29,7 +32,7 @@ public class SearchController {
         return "search :: content";
     }
 
-    @ResponseStatus(value= HttpStatus.BAD_REQUEST)
+    @ResponseStatus(value = HttpStatus.BAD_REQUEST)
     @ExceptionHandler(UncategorizedApiException.class)
     public String handleUncategorizedApiException(Model m) {
         m.addAttribute("res", twitter.emptyAnswer());

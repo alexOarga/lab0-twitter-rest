@@ -3,20 +3,20 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Cliente MVC Twitter</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet"
-          href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          th:href="@{/webjars/bootstrap/4.0.0/css/bootstrap.min.css}"/>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          rel="stylesheet"
+          th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}"/>
 </head>
 <body>
 <nav class="navbar navbar-dark bg-dark navbar-expand-sm sticky-top">
     <a class="navbar-brand" href="#">Cliente MVC Twitter</a>
-    <form class="mx-2 my-auto d-inline w-100" id="search" action="search" method="get">
+    <form action="search" class="mx-2 my-auto d-inline w-100" id="search" method="get">
         <div class="input-group">
-            <input class="form-control" type="text" id="q" name="q" placeholder="Escribe algo que quieras buscar"/>
+            <input class="form-control" id="q" name="q" placeholder="Escribe algo que quieras buscar" type="text"/>
             <span class="input-group-append">
                 <button class="btn btn-secondary" type="submit">Buscar</button>
             </span>
@@ -47,8 +47,8 @@
 <script defer="" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
         th:src="@{/webjars/font-awesome/5.0.6/svg-with-js/js/fontawesome-all.js}"></script>
 
-<script th:src="@{/functions.js}"
-        src="../static/functions.js"></script>
+<script src="../static/functions.js"
+        th:src="@{/functions.js}"></script>
 
 </body>
 </html>

@@ -29,7 +29,7 @@ public class TwitterLookupService {
     }
 
     public SearchResults emptyAnswer() {
-        return new SearchResults(Collections.emptyList(), new SearchMetadata(0,0 ));
+        return new SearchResults(Collections.emptyList(), new SearchMetadata(0, 0));
     }
 }
 
