@@ -14,7 +14,7 @@
 <body>
 <nav class="navbar navbar-dark bg-dark navbar-expand-sm sticky-top">
     <a class="navbar-brand" href="#">Cliente MVC Twitter</a>
-    <form action="search" class="mx-2 my-auto d-inline w-100" id="search" method="get">
+    <form action="query-twitter" class="mx-2 my-auto d-inline w-100" id="search" method="get">
         <div class="input-group">
             <input class="form-control" id="q" name="q" placeholder="Escribe algo que quieras buscar" type="text"/>
             <span class="input-group-append">
@@ -36,8 +36,36 @@
         </div>
     </form>
     -->
-    <div class="card-columns mt-3" id="resultsBlock"></div>
+    <div class="card-columns" id="resultsBlock"></div>
+    <script id="template" type="x-tmpl-mustache">
+        {{#tweets}}
+        <div class="card p-3">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <a
+                            href="https://twitter.com/{{fromUser}}"
+                            target="_blank">
+                        <span class="fas fa-user"></span>
+                        <span>{{fromUser}}</span></a>
+                    dice en
+                    <a
+                            href="https://twitter.com/{{fromUser}}/status/{{idStr}}"
+                            target="_blank">
+                        <span class="fab fa-twitter-square"></span>
+                        <span>{{id}}</span></a>
+                </h5>
+                <p class="card-text">{{unmodifiedText}}</p>
+            </div>
+        </div>
+        {{/tweets}}
+    </script>
 </div>
+
+<script src="https://unpkg.com/mustache@latest"></script>
+
+<!--<script defer="" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
+        th:src="@{/webjars/font-awesome/5.0.6/svg-with-js/js/fontawesome-all.js}"></script>-->
+
 <script src="http://code.jquery.com/jquery-3.0.0.min.js"
         th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
 <script

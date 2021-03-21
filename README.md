@@ -13,3 +13,5 @@ heroku config:set twitter.accessToken=<ask twitter for a key>
 heroku config:set twitter.accessTokenSecret=<ask twitter for a key>
 git push heroku master
 ```
+
+Check out my heroku deployment!! [https://pure-eyrie-95528.herokuapp.com/](https://pure-eyrie-95528.herokuapp.com/)
