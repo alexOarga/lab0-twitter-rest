@@ -17,6 +17,9 @@ docker run
 -p 8080:8080 ovrgv/lab0-twitter-rest:latest
 ```
 
+This repo is automatically deployed to Heroku:
+[![Build Status](https://travis-ci.com/alexOarga/lab0-twitter-rest.svg?branch=master)](https://travis-ci.com/github/alexOarga/lab0-twitter-rest)
+
 This docker image has an autobuild setup:
 [https://hub.docker.com/r/ovrgv/lab0-twitter-rest/builds](https://hub.docker.com/r/ovrgv/lab0-twitter-rest/builds)
 
